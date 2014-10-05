@@ -17,6 +17,11 @@ public final class StreamingSubscription extends SubscriptionBase{
 
 	private ExchangeService service;
 
+  public StreamingSubscription(ExchangeService service, String subscriptionId) throws Exception {
+    super(service);
+    setId(subscriptionId);
+  }
+
 	protected StreamingSubscription(ExchangeService service) throws Exception {
 		super(service);
 	}
